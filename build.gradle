@@ -6,6 +6,7 @@ apply plugin: 'idea'
 apply plugin: 'application'
 
 mainClassName = "main.java.Main"
+applicationName = "schelling"
 
 sourceSets.main.java.srcDirs = ['src']
 
