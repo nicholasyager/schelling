@@ -1,7 +1,5 @@
-package main;
+package main.java;
 
-
-import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -100,7 +98,6 @@ public class World {
         }
     }
 
-    @NotNull
     private List<Integer> getRaceList() {
         List<Integer> races = new ArrayList<>();
         for (Coord coord : unhappy) {

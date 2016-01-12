@@ -1,4 +1,4 @@
-import main.Coord;
+import main.java.Coord;
 import org.junit.Test;
 
 import java.util.List;

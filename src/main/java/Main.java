@@ -1,4 +1,4 @@
-package main;
+package main.java;
 
 import org.apache.commons.cli.*;
 
@@ -23,6 +23,7 @@ public class Main {
 
         for (int i = 0; i < steps; i++) {
             File f = new File(outputDirectory+"/" + i + ".png");
+            f.mkdirs();
             ImageIO.write(world.getImage(), "PNG", f);
             world.step();
         }
