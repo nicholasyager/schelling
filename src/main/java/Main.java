@@ -22,7 +22,7 @@ public class Main {
         World world = new World(width, height, numRaces, threshold);
 
         for (int i = 0; i < steps; i++) {
-            File f = new File(outputDirectory+"/" + i + ".png");
+            File f = new File(outputDirectory+"/" + String.format("%03d", i) + ".png");
             f.mkdirs();
             ImageIO.write(world.getImage(), "PNG", f);
             world.step();
@@ -81,7 +81,7 @@ public class Main {
         }
 
         if (cmd.hasOption("r")) {
-            numRaces = Integer.parseInt(cmd.getOptionValue("n"));
+            numRaces = Integer.parseInt(cmd.getOptionValue("r"));
         } else {
             numRaces = 2;
         }
