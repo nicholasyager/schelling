@@ -1,6 +1,8 @@
 package main;
 
 
+import org.jetbrains.annotations.NotNull;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -10,12 +12,12 @@ import java.util.Random;
 
 public class World {
 
-    private final double threshold;
     Random rand = new Random();
-    private int width;
-    private int height;
-    private int numRaces;
+
+    private int width, height, numRaces;
+    private double threshold;
     private int[][] world;
+
     private BufferedImage image;
     private List<Coord> unhappy;
     private Color[] colors;
@@ -86,22 +88,30 @@ public class World {
             unhappy = findUnhappy(unhappy);
         }
         System.out.println(unhappy.size());
-        List<Integer> races = new ArrayList<>();
-        for (Coord coord : unhappy) {
-            races.add(world[coord.x][coord.y]);
-        }
+        List<Integer> races = getRaceList();
         Collections.shuffle(races);
+        moveRaces(races);
+    }
+
+    private void moveRaces(List<Integer> races) {
         for (Coord coord : unhappy) {
             world[coord.x][coord.y] = races.remove(0);
             updateImage(coord.x, coord.y);
         }
     }
 
-    public Color[] generateColors(int n)
-    {
+    @NotNull
+    private List<Integer> getRaceList() {
+        List<Integer> races = new ArrayList<>();
+        for (Coord coord : unhappy) {
+            races.add(world[coord.x][coord.y]);
+        }
+        return races;
+    }
+
+    public Color[] generateColors(int n) {
         Color[] cols = new Color[n];
-        for(int i = 0; i < n; i++)
-        {
+        for (int i = 0; i < n; i++) {
             cols[i] = Color.getHSBColor((float) i / (float) n, 0.85f, 1.0f);
         }
         return cols;

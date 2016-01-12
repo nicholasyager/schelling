@@ -1,5 +1,3 @@
-package test;
-
 import main.Coord;
 import org.junit.Test;
 

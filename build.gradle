@@ -2,13 +2,13 @@ group 'com.nicholasyager.main'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-
-sourceCompatibility = 1.5
+apply plugin: 'idea'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    compile 'commons-cli:commons-cli:1.3.1'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
