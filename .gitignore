@@ -1,6 +1,5 @@
 build/
 .gradle
-images/
 out/
 *.iml
 *.swp
