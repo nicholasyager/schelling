@@ -6,7 +6,7 @@ application of game theory to economics, politics,  and sociology. One
 interesting creation was his the Schelling segregation model: a way of showing
 how small-scale racial prejudices in one's neighbors can result in segregation.
 
-[[https://nicholasyager.com/2016-01-01/example.gif|alt=example]]
+!(3-race example simulation)[https://nicholasyager.com/2016-01-01/example.gif|alt=example]
 
 While the Schelling segregation model is wildly simplistic in nature, it
 remains useful as a means of examining how even minuet social tensions may
