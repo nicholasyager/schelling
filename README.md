@@ -4,7 +4,8 @@ A Java-based model for n-race Schelling segregation.
 Thomas Schelling is an American economist who made breakthroughs in the
 application of game theory to economics, politics,  and sociology. One
 interesting creation was his the Schelling segregation model: a way of showing
-how small-scale racial prejudices in one's neighbors can result in segregation.
+how small-scale biases towards or against one's neighbors can result in 
+large-scale patterns of segregation.
 
 ![3-race example](images/example.gif)
 
